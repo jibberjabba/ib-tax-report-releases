@@ -8,6 +8,7 @@ You don't need to install Python.
 |---|---|---|
 | Mac | `IB-Tax-Report-…-mac.dmg` | macOS 10.13 High Sierra or later, Intel or Apple Silicon |
 | Windows PC | `IB-Tax-Report-…-windows.zip` | Windows 10 or 11, 64-bit |
+| Either | `IB-Tax-Report-…-sample-data.zip` | Made-up sample files to try the app with (optional) |
 
 ## Mac
 
@@ -41,6 +42,35 @@ You only need to do this the first time.
      (create shortcut)**.
 3. The first time, Windows may show **"Windows protected your PC"** (the
    Windows build isn't code-signed yet). Click **More info → Run anyway**.
+
+## Try it with the sample files first
+
+Before setting up a Flex Query for a client, check the app works on your
+computer with the sample files. They're made-up Flex Query statements: every
+name, account number and figure in them is fictional.
+
+1. Download `IB-Tax-Report-…-sample-data.zip` from the
+   [Releases page](https://github.com/jibberjabba/ib-tax-report-releases/releases/latest).
+2. Extract it. On Windows, right-click → **Extract All…** → **Extract**; on a
+   Mac, double-click it. Don't open the files from inside the zip: the app
+   saves its workbooks next to the XML files, and it can't write into a zip.
+3. Open **IB Tax Report** and choose the extracted
+   **IB Tax Report Sample Data** folder.
+4. You should get **13 workbooks**. If you do, the app works. Open a few of
+   them to see how each kind of entry is reported.
+
+The folder has five files, one per kind of client:
+
+| File | What it shows |
+|---|---|
+| `Test_Personal_Multi_Tax_Assessment.xml` | Two individual accounts, plus a combined `ALL` workbook |
+| `Test_SMSF_Tax_Assessment.xml` | One self-managed super fund (CGT discount 1/3) |
+| `Test_Trust_Multi_Tax_Assessment.xml` | Two family trusts, plus a combined workbook; includes GST on fees |
+| `Test_Company_Multi_Tax_Assessment.xml` | Two companies, plus a combined workbook (no CGT discount) |
+| `Test_Mixed_Entity_Tax_Assessment.xml` | An individual and a trust in one file (combined workbook named `Mixed_ALL`) |
+
+`READ ME FIRST.txt` in the folder has the same steps. Keep real client files
+in their own folder, not in the sample folder.
 
 ## Using it
 
